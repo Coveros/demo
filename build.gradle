@@ -127,7 +127,7 @@ pitest {
 
 // configure jetty to run on port 8080 when we run "./gradlew appRun"
 gretty {
-    httpPort = 8080
+    httpPort = 2222
     servletContainer = 'tomcat8'
     contextPath = "demo"
 }
