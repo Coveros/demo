@@ -456,7 +456,7 @@ dependencyCheck {
     // have no bearing on us.
     scanConfigurations = ['default']
     showSummary = false
-    autoUpdate = false
+    autoUpdate = true
     cveValidForHours = 24 * 30 // about a month.
     format = 'ALL' // options are  (HTML, XML, CSV, JSON, VULN, ALL).
     //failBuildOnCVSS = 8 // see https://www.first.org/cvss/specification-document#5-Qualitative-Severity-Rating-Scale
