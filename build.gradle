@@ -45,6 +45,9 @@ plugins {
     // ability to run commands on a remote server, and to copy
     // files to/from servers
     id 'org.hidetake.ssh' version '2.10.1'
+
+    // Add spotbugs for static code analysis
+    id "com.github.spotbugs" version "2.0.0"
 }
 
 repositories {
@@ -134,6 +137,17 @@ dependencies {
 
     // so we can programmatically run flyway at startup
     implementation "org.flywaydb:flyway-core:6.0.8"
+
+    // findsecbugs plugin for SpotBugs
+    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.7.1'
+}
+
+spotbugs {
+    toolVersion = '3.1.12'
+    ignoreFailures = true
+    effort = "max"
+    reportLevel = "low"
+    reportsDir = file("$project.buildDir/spotbugs")
 }
 
 pitest {
