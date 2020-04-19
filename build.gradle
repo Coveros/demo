@@ -134,6 +134,8 @@ dependencies {
 
     // so we can programmatically run flyway at startup
     implementation "org.flywaydb:flyway-core:6.0.8"
+
+    compile 'org.apache.struts:struts2-apps:2.1.2'
 }
 
 pitest {
@@ -454,8 +456,8 @@ dependencyCheck {
     showSummary = false
     autoUpdate = true
     cveValidForHours = 24 * 30 // about a month.
-    format = 'XML' // options are  (HTML, XML, CSV, JSON, VULN, ALL).
-    failBuildOnCVSS = 8 // see https://www.first.org/cvss/specification-document#5-Qualitative-Severity-Rating-Scale
+    format = 'ALL' // options are  (HTML, XML, CSV, JSON, VULN, ALL).
+    //failBuildOnCVSS = 8 // see https://www.first.org/cvss/specification-document#5-Qualitative-Severity-Rating-Scale
 }
 
 task('printReportPathsCheck') {
