@@ -372,6 +372,10 @@ dependencyCheck {
     format = 'ALL' // options are  (HTML, XML, CSV, JSON, VULN, ALL).
     failBuildOnCVSS = 9 // see https://www.first.org/cvss/specification-document#5-Qualitative-Severity-Rating-Scale
     suppressionFile = "suppression.xml"
+    cve {
+        urlModified = "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-modified.json.gz"
+        urlBase = "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-%d.json.gz"
+    }
 }
 
 task('printReportPathsCheck') {
