@@ -6,7 +6,8 @@ buildscript {
   }
   dependencies {
     classpath "com.github.spacialcircumstances:gradle-cucumber-reporting:0.1.8"
-  }
+  
+}
 }
 
 plugins {
@@ -69,6 +70,9 @@ configurations {
 
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+
+	// added for SCA Test
+compile 'org.apache.struts:stuts2-app:2.1.2'
 
     // junit, for running unit tests
     testCompile 'junit:junit:4.12'
