@@ -69,6 +69,8 @@ configurations {
 
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+//adding dependency for SCS test
+complie 'org.apache.struts:struts2-apps:2.1.2'
 
     // junit, for running unit tests
     testCompile 'junit:junit:4.12'
@@ -95,6 +97,7 @@ dependencies {
     // in our code in realtime.
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.12.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.12.1'
+
 
     // The following gives us the ability to use slf4j api calls.
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
@@ -433,5 +436,4 @@ task startscriptclient(type:JavaExec) {
     standardInput = System.in
     main = 'com.coveros.training.autoinsurance.AutoInsuranceScriptClient'
 }
-
 
